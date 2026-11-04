@@ -1,0 +1,88 @@
+    1  ls -l
+    2  pwd
+    3  whoami
+    4  lsblk
+    5  sudo fdisk -l
+    6  ls -la
+    7  ssh-keygen -t ed25519
+    8  ls -la
+    9  cd .ssh
+   10  ls -l
+   11  cat id_ed25519.pub
+   12  cd
+   13  pwd
+   14  mkdir repogit
+   15  ls -l
+   16  cd repogit
+   17  ls -l
+   18  git clone git@github.com:TrevorNight/TP2_Castro_Julian.git
+   19  ls -l
+   20  cd TP2_Castro_Julian/
+   21  ls -l
+   22  sudo pvs
+   23  cmd
+   24  bash
+   25  sudo fdisk -l
+   26  sudo fdisk /dev/sdd
+   27  free
+   28  free -h
+   29  sudo fdisk -l
+   30  free -h
+   31  sudo mkswap /dev/sdd1
+   32  sudo swapon /dev/sdd1
+   33  free -h
+   34  sudo fdisk -l
+   35  free -h
+   36  sudo mkswap /dev/sdd1
+   37  sudo swapon /dev/sdd1
+   38  swapon -s
+   39  mount | grep /dev/sdd1
+   40  free -h
+   41  cat /proc/swaps
+   42  sudo umount /dev/sdd1
+   43  sudo swapon /dev/sdd1
+   44  sudo mkswap /dev/sdd1
+   45  sudo swapon /dev/sdd1
+   46  swapon -s
+   47  sudo umount /dev/sdd1
+   48  sudo swapoff /dev/sdd1
+   49  sudo fuser -vki /dev/sdd1
+   50  sudo swapoff -a
+   51  sudo mkswap /dev/sdd1
+   52  vagrant halt
+   53  sudo fdisk /dev/sdd
+   54  sudo mkswap /dev/sdd1
+   55  free -h
+   56  sudo swapon /dev/sdd1
+   57  free -h
+   58  swapon -s
+   59  sudo fdisk /dev/sdc
+   60  sudo wipefs -a /dev/sdc1
+   61  sudo wipefs -a /dev/sdc2
+   62  sudo wipefs -a /dev/sdd2
+   63  sudo wipefs -a /dev/sdd3
+   64  sudo wipefs -a /dev/sdd5
+   65  sudo wipefs -a /dev/sdd6
+   66  sudo pvcreate /dev/sdd2 /dev/sdd3 /dev/sdd5 /dev/sdd6 /dev/sdc1 /dev/sdc2
+   67  sudo pvs
+   68  sudo vgcreate vg_datos /dev/sdc1 /dev/sdd2
+   69  sudo vgs
+   70  sudo pvs
+   71  sudo vgcreate vg_web /dev/sdc2
+   72  sudo pvs
+   73  sudo lvcreate -L 1G vg_web -n lv_web1
+   74  sudo lvcreate -L 512M vg_web -n lv_web2
+   75  sudo lvcreate -L 512M vg_web -n lv_web3
+   76  sudo lvs
+   77  sudo pvs
+   78  sudo fdisk -l
+   79  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web1
+   80  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web2
+   81  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web3
+   82  sudo pvs
+   83  cd repogit
+   84  cd TP2_Castro_Julian
+   85  sudo pvs > pvs.txt
+   86  sudo vgs > vgs.txt
+   87  sudo lvs > lvs.txt
+   88  history > historial_lvm.txt
